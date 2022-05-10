@@ -1,1 +1,5 @@
-<h2>1, 2, 3, 4 cows?</h2>
+<% if flash[:success] %>
+  <p class="alert alert-success" role="alert">
+    <%= flash[:success] %>
+  </p>
+<% end %>
