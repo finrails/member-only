@@ -3,6 +3,12 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   <section class="w-100 row d-flex justify-content-center">
     <div class="p-3 shadow col-lg-6 col-md-10">
+
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, placeholder: 'smallchicken72', autofocus: true, class: 'form-control' %>
+      </div>
+
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, placeholder: 'example@gmail.com', autofocus: true, autocomplete: "email", class: 'form-control' %>
