@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(body: post_params[:body], user_id: current_user[:id])
 
     if @post.save
       flash[:success] = 'Your post have been submited!'
