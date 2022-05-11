@@ -9,7 +9,11 @@
       <% @posts.each do |post| %>
         <div class="card mb-2">
           <div class="card-body">
-            <h6 class="card-title">Anom</h6>
+            <% if user_signed_in? %>
+              <h6 class="card-title"><%= post.user.email %></h6>
+            <% else %>
+              <h6 class="card-title">Anonymous</h6>
+            <% end %>
             <%= post.body %>
           </div>
         </div>
