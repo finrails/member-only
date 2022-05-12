@@ -13,23 +13,23 @@
   <body>
     <%= render partial: 'shared/header' %>
     <% if flash[:notice] %>
-      <p class="alert alert-primary d-flex justify-content-between" role="alert">
+      <p data-controller='alert' class="alert alert-primary d-flex justify-content-between" role="alert">
         <%= notice %>
-        <button type="button" class="btn-close" aria-label="Close"></button>
+        <button data-action='click->alert#closeAlert' type="button" class="btn-close" aria-label="Close"></button>
       </p>
     <% end %>
 
     <% if flash[:alert] %>
-      <p class="alert alert-warning d-flex justify-content-between" role="alert">
+      <p data-controller='alert' class="alert alert-warning d-flex justify-content-between" role="alert">
         <%= alert %>
-        <button type="button" class="btn-close" aria-label="Close"></button>
+        <button data-action='click->alert#closeAlert' type="button" class="btn-close" aria-label="Close"></button>
       </p>
     <% end %>
 
     <% if flash[:success] %>
-      <p class="alert alert-success d-flex justify-content-between" role="alert">
+      <p data-controller='alert' class="alert alert-success d-flex justify-content-between" role="alert">
         <%= flash[:success] %>
-        <button type="button" class="btn-close" aria-label="Close"></button>
+        <button data-action='click->alert#closeAlert' type="button" class="btn-close" aria-label="Close"></button>
       </p>
     <% end %>
 
