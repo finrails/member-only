@@ -8,3 +8,4 @@ pin "cash", to: "https://cdn.jsdelivr.net/npm/cash-dom@8.1.1/dist/cash.min.js", 
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin_all_from "app/javascript/utils", under: "utils", preload: true
 
+pin "sweetalert2", to: "https://ga.jspm.io/npm:sweetalert2@11.4.14/dist/sweetalert2.all.js"
