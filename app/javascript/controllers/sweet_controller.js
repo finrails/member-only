@@ -13,9 +13,8 @@ export default class extends Controller {
 
     Swal.fire({
       title: 'Do you want to log out?',
-      showDenyButton: true,
-      confirmButtonText: 'Yes',
-      denyButtonText: `No`,
+      showCancelButton: true,
+      confirmButtonText: 'Yes, i want to!',
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
