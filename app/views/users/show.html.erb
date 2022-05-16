@@ -1,3 +1,15 @@
-<p>
-  <%= @user.name %>
-</p>
+<div class="container mt-4">
+  <section class="row">
+    <article class="col d-flex justify-content-center">
+      <h3>@<%= @user.name %></h3>
+    </article>
+    <% @user.posts.each do |post| %>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h6 class="card-title">@<%= post.user.name.downcase %></h6>
+            <%= post.body %>
+          </div>
+        </div>
+      <% end %>
+  </section>
+</div>
